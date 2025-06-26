@@ -1,3 +1,4 @@
+// Normal Function
 function calcDiscount(price, discount) {
   return price * (discount / 100);
 }
@@ -13,7 +14,8 @@ const discount = 30;
 const result = calcDiscount(product["price"], discount);
 
 console.log(result); // 450
-// <-->
+
+// Normal Function using Filter
 function highSalary(employees) {
   return employees.salary > 4000;
 }
@@ -29,3 +31,10 @@ const highSalaries = employees.filter(highSalary);
 
 console.log(highSalaries);
 // [{ name: 'Bruno', salary: 5000 }, { name: 'Carlos', salary: 4200 }]
+
+// Function Expression
+const sayGoodbye = function (name) {
+  return `Goodbye, ${name}.`;
+};
+
+console.log(sayGoodbye("Bob")); // Output: "Goodbye, Bob."
